@@ -42,10 +42,14 @@ const HomeScreen = ({ navigation }) => {
             <ScreenContainer>
             <View style={styles.container}>
                 <List.Item
-                title="LibreSchemas" titleStyle={{ fontWeight: "bold", color: "#ffff00"}}
-                description="General schemas for common social situations." descriptionStyle={{ color: "white" }}
-                left={props => <List.Icon color={"white"} icon="currency-sign" />}
-                style={styles.item}/>
+                    title="LibreSchemas Datasets" titleStyle={{ fontWeight: "bold", color: "#ffff00"}}
+                    description="General schemas for common social situations." descriptionStyle={{ color: "white" }}
+                    left={props => <List.Icon color={"white"} icon="currency-sign" />}
+                    style={styles.item}
+                    onPress={() =>
+                        navigation.navigate('Browse Schemas')
+                    }
+                />
                 <View style={{ alignItems: "center" }}>
                     <Image style={{ aspectRatio: 1, width: "75%", height: undefined, resizeMode:"cover" }} resizemode="cover" source={require('../../assets/libreschemas_logo.png')} />
                     <Text style={{ marginHorizontal: 16 }}>Visit <Text style={{ color: 'blue'}} onPress={() =>{Linking.openURL('https://www.LibreSchemas.org')}}>LibreSchemas.org</Text> for the latest updates on our Free and Open Source Software. We would appreciate contributions to our public repositories on <Text style={{ color: 'blue'}} onPress={() =>{Linking.openURL('https://github.com/LibreSchemas')}}>GitHub</Text>.</Text>
